@@ -134,7 +134,7 @@ def setup_git_upstream():
     success, _, error = run_command(f"git remote add upstream {UPSTREAM_REPO}")
     if success:
         print_success(f"Upstream remote added: {UPSTREAM_REPO}")
-        print(f"  → To get updates later, run: git pull upstream main")
+        print(f"  → To get updates later, run: git pull upstream main --allow-unrelated-histories")
         return True
     else:
         print_error(f"Failed to add upstream remote: {error}")
