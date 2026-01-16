@@ -216,7 +216,14 @@ def print_summary(results):
     """Print final summary of setup status"""
     print_header("Setup Summary")
     
-    all_passed = all(results.values())
+    all_passed = (
+        results['python_version'] and
+        results['git_upstream'] and
+        results['packages_installed'] and
+        results['imports_successful'] and
+        results['vscode_check_possible'] and
+        results['extensions_installed']
+    )
     
     if all_passed:
         print_success("🎉 All checks passed! Your environment is ready.")
