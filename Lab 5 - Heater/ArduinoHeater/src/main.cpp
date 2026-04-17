@@ -52,7 +52,7 @@ void setup(){
     while (1) { delay(10); }
   }
 
-  Serial.println("Time (ms), Temperature (C), Shunt Voltage, Bus Voltage (V), Current (mA), Power (mW), Load Voltage (V)");
+  Serial.println("Time (ms),Temperature (C),Shunt Voltage,Bus Voltage (V),Current (mA),Power (mW),Load Voltage (V)");
 
   // Start up the dallas temperature library
   sensors.begin();
